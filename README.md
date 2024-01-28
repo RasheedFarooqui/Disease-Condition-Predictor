@@ -1,32 +1,84 @@
 # Disease-Condition-Predictor
-Data Cleaning:
+## About Dataset
+> Patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction. (This dataset was used for the Winter 2018 Kaggle University Club Hackathon)
 
-Reads a dataset containing drug reviews and relevant information.
-Removes irrelevant columns, handles missing values, and drops duplicate rows.
-Converts column names to lowercase for consistency.
-Exploratory Data Analysis (EDA):
+## Problem Domain
+> Predicting disease conditions from customer reviews using NLP and ML techniques and personalized healthcare recommendations
 
-Analyzes the distribution of drugs, conditions, ratings, and useful counts.
-Visualizes the most common drugs, conditions, rating distributions, and useful count distributions.
-Creates word clouds to visualize the most frequent words in reviews for specific conditions.
-Text Preprocessing:
+## Libraries used :
+>
+> Numpy
+>
+>   Pandas
+>
+>   Seaborn
+>
+>  Matplotlib
+>
+> scikit-Learn (classification and NLP Models)
+>
+>  NLTK
 
-Cleans and preprocesses the review text by removing special characters, converting to lowercase, tokenizing, removing stopwords, and lemmatizing.
-Model Building:
+## Project Outline
 
-Utilizes TF-IDF (Term Frequency-Inverse Document Frequency) to convert text data into numerical features.
-Splits the dataset into training and testing sets.
-Implements several classification models:
-Logistic Regression
-Support Vector Classifier (SVC)
-Random Forest Classifier
-Decision Tree Classifier
-Evaluation:
+* I divided the project into  six parts:
 
-Evaluates each model's performance using accuracy score and confusion matrix.
-Visualizing Results:
+  - Data Cleaning
+  - Exploratory Data Analysis
+  - Text Preprocessing
+  - Model Building (TF-IDF and Classification Models)
+  - Visualizing Results
+  - Model's Web App development
+ 
+### 1. Data Cleaning
+  - Filtered Relevant columns
+  - Handled missing values and duplicated rows
+  - Lower casing COlumn names
+  - Checking data types and indexing
 
-Visualizes the performance of different models using a bar plot.
-App Structure:
+### 2. Exploratory Data Analysis
+  > Visualized:
 
-Saves the trained SVC model, preprocessed dataframe, and TF-IDF vectorizer using pickle for later use.
+  - Most Common Drugs
+  - Most Common Conditions
+  - Rating Distribution and Distribution of Useful Count
+  - Filtering Most Common Conditions
+  - Average Ratings of Most Common Drugs
+  - Average Useful Count of Most Common Drugs
+  - Drugs with Highest Ratings and Useful Counts
+  - Word Clouds for Different Conditions
+
+
+ ### 3. Text Preprocessing
+  - Filtering Relevant Conditions
+  - Text Cleaning (lower casing)
+  - Text Tokenization and Lemmatization
+  - Building Corpus
+  - Replacing Original Reviews with Cleaned Reviews
+
+
+ ### 4. Model Building
+  - 4.1 TF-IDF Model
+  - 4.2 Classification Models
+
+
+     * Logistic Regression
+     * Support Vector Classifier
+     * Random Forest Classifier
+     * Decision Tree Classifie
+   
+ ### 5. Visualizing Result
+  - Achieved an accuracy score of approximately 86.46% with Logistic Regression
+  - Achieved an accuracy score of approximately 90.26% with SVC (Highest)
+  - Achieved an accuracy score of approximately 86.68% with Random Forest Classifier
+  - Achieved an accuracy score of approximately 83.21% with Descision Tree Classifier
+
+
+### 6. Model Web App develpment:
+
+* Used pickle to dump and load dataframe and SVC model to a new IDE
+
+* Used Streamlit Library To Create a Web App which takes the input from user and displays the predicted Disease Condition for the given Input
+
+
+
