@@ -9,6 +9,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import pickle
 import zipfile
+import nltk
 import os
 import streamlit as st
 nltk.download('stopwords')
