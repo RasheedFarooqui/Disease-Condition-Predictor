@@ -8,11 +8,15 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import pickle
-
-
+import rarfile
+import os
 import streamlit as st
 
-df = pickle.load(open('diseasedf.pkl','rb'))
+with rarfile.RarFile('diseasedf.rar', 'r') as rar_archive:
+    rar_archive.extract('diseasedf.pkl')
+    
+df = pd.read_pickle('diseasedf.pkl')
+# df = pickle.load(open('diseasedf.pkl','rb'))
 classifier = pickle.load(open('SVC.pkl','rb'))
 vectorizer = pickle.load(open('vectorizerr.pkl','rb'))
 
