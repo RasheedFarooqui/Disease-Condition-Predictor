@@ -70,7 +70,7 @@ st.title('Disease Condition Predictor With Recommended Prescriptions')
 condition = st.text_area("Enter your disease condition details here:")
 
 if st.button('Predict'):
-    if condition == '' or ' ':
+    if condition == '': 
         st.warning('No input Given')
     else:
         prediction,drugs = predictor(condition)
