@@ -13,7 +13,7 @@ import os
 import streamlit as st
 
 
-rar_archive_path = 'diseasedf.rar'
+rar_archive_path = 'diseasedf.zip'
 extract_dir = 'extracted_files'
 os.makedirs(extract_dir, exist_ok=True)
 
