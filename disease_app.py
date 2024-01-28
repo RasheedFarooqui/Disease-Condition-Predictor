@@ -11,6 +11,9 @@ import pickle
 import zipfile
 import os
 import streamlit as st
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 
 rar_archive_path = 'diseasedf.zip'
